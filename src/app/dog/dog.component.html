@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>pets</mat-icon>
+   </button>
+   <span>Projeto Dogs</span>
+   <span class="example-spacer"></span>
+   <button mat-raised-button color="basic" (click)="getDog()">Gerar Imagem</button>
+</mat-toolbar>
+<div class="container">
+    <div class="polaroid" *ngIf="this.dog">
+        <div class="card-imagem">
+            <img class="imagemDog" [src]="this.dog.message">
+        </div>
+        <button mat-raised-button color="warn" (click)="getDog()" style="margin-left: 20em; margin-top: 0.8em;">Próximo Dog</button>
+    </div>
+</div>
